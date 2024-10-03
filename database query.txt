@@ -1,0 +1,98 @@
+CREATE DATABASE mydb2024;
+
+CREATE TABLE Zomato(
+id int PRIMARY KEY AUTO_INCREMENT,
+fname varchar(30),
+mobile bigint UNIQUE Key,
+email varchar(100) UNIQUE Key
+);
+
+INSERT INTO Zomato(id,fname,mobile,email) VALUES(1,"sefin",9824935774,"sefingeevarghese007@gmail.com")
+
+INSERT INTO Zomato(id,fname,mobile,email) VALUES("mihir",8735962546,"mihirrajput009@gmail.com")
+
+ALTER TABLE Zomato ADD COLOUMN City varchar(20);
+
+Update Zomato SET fname="mahipal" WHERE id=2;
+
+
+Delete->
+3 types
+
+1.) delete -> deletes 1 row only
+2.) truncate -> deletes Whole table but structure of the table remain same
+3) drop -> drop the database.
+
+DELETE FROM Zomato WHERE id=2;
+TRUNCATE TABLE Zomato;
+DROP DATABASE mydb2024;
+
+FETCH
+
+select
+
+SELECT * FROM Zomato
+
+SELECT * FROM Zomato WHERE id=2;
+
+SELECT fname,mobile FROM Zomato;
+
+SELECT fname,mobile FROM Zomato WHERE id=3;
+
+
+Like 
+
+SELECT * FROM Zomato WHERE mobile like '7%';
+SELECT * FROM Zomato WHERE fname like '%a';
+SELECT * FROM Zomato WHERE city like '_a%';
+SELECT * FROM Zomato WHERE city like '__a%';
+SELECT * FROM Zomato WHERE city like '%_a%';
+
+Aggregate functions
+
+min
+max
+avg
+sum
+count
+
+SELECT sum(price) FROM Zomato;
+
+Order by:
+'ASC'  :SELECT * FROM Zomato ORDER BY price ASC;
+'DESC' :SELECT * FROM Zomato ORDER BY price DESC;
+
+to show minimum details
+SELECT MIN(price),fname,mobile,email,City FROM Zomato;
+
+
+
+fetch id no2
+fetch city name start with 'a'
+fetch only name filed from table
+delete the last raw
+update name of second id name="raj"
+
+
+SELECT * FROM student WHERE id=2;
+SELECT * FROM student WHERE city like 'a%';
+SELECT name FROM student;
+DELETE FROM student WHERE id=4
+Update student SET name="raj" WHERE id=2;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
